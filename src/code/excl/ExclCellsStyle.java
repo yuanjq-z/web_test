@@ -25,7 +25,8 @@ public class ExclCellsStyle {
 		
 		HSSFCellStyle cell_style = excl.createCellStyle();
 		
-		cell_style.setAlignment(HSSFCellStyle.ALIGN_CENTER);								// 单元格对齐模式  （居中）
+		cell_style.setAlignment(HSSFCellStyle.ALIGN_CENTER);								// 水平：单元格对齐模式  （居中）
+		cell_style.setVerticalAlignment(HSSFCellStyle.VERTICAL_TOP); 						// 垂直：单元格垂直居中
 		cell_style.setBorderBottom(HSSFCellStyle.BORDER_DASH_DOT);							// 底部边框
 		cell_style.setBorderLeft(HSSFCellStyle.BORDER_DASH_DOT_DOT);						// 左边框
 		cell_style.setBorderRight(HSSFCellStyle.BORDER_DASHED); 							// 右边框
@@ -40,7 +41,6 @@ public class ExclCellsStyle {
 //		cell_style.setLocked(true);
 //		cell_style.setRotation((short)2);
 //		cell_style.setUserStyleName("123");
-//		cell_style.setVerticalAlignment((short)1);
 		cell_style.setWrapText(true);														// 鼠标悬停显示内容
 		
 		excl_cell.setCellStyle(cell_style);
